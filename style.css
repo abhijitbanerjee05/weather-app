@@ -1,0 +1,116 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  margin: 0;
+  /* background-image: linear-gradient(rgb(30, 33, 48), rgb(74, 98, 110)); */
+  background-image: linear-gradient(
+      rgba(20, 20, 20, 0.5),
+      rgba(20, 20, 20, 0.9)
+    ),
+    url("images/weather-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.weather-container {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  border-radius: 1rem;
+  width: 80%;
+  margin-inline: auto;
+}
+.temp-location {
+  width: fit-content;
+  margin-inline: auto;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.location {
+  font-weight: 400;
+  font-size: 1.125rem;
+  margin: 0.25rem;
+}
+.temperature-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+.temperature {
+  margin: 0.25rem;
+  font-weight: 600;
+  font-size: 4rem;
+}
+.celcius {
+  font-weight: 100;
+  font-size: 2rem;
+}
+.weather-desription {
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin: 0.25rem;
+}
+.additional-info-container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.additional-info {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
+.additional-info-label {
+  font-weight: 400;
+  font-size: 1rem;
+}
+.weather-forecast-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 4rem 0;
+}
+.weather-forecast-per-day {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.1)
+  );
+}
+.day-and-date {
+  font-weight: 400;
+  font-size: 0.675rem;
+}
+.forecast-temperature-container {
+  display: flex;
+  align-items: center;
+}
+.forecast-temperature {
+  margin: 0;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.forecast-celcius {
+  margin: 0;
+  font-weight: 200;
+  font-size: 1.25rem;
+}
+.forecast-weather-desription {
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  body {
+    overflow-y: scroll;
+  }
+  .weather-forecast-container {
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
